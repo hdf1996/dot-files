@@ -8,7 +8,7 @@ source $ZSH/oh-my-zsh.sh
 
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias push-my-fucking-dot-files="cd ~/.dot-files && git add . && git commit -m 'Updated dot-files!' && git push origin master"
+alias push-my-fucking-dot-files="cd ~/.dot-files && git add . && git commit -m 'Updated dot-files!' && git push origin master && cd -"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
@@ -18,6 +18,6 @@ export NVM_DIR="/home/hugo/.nvm"
 if [ ! -z "$TMUX" ]; then
   if $(cd ~/.dot-files; git status -s | grep -q '^.M')
   then
-    echo "You have uncommited changes in your dot-files folder"
+    echo "You have uncommited changes in your dot-files folder. You can push them using push-my-fucking-dot-files"
   fi
 fi 

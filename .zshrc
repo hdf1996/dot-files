@@ -21,15 +21,9 @@ if [ ! -z "$TMUX" ]; then
   then
     echo "You have uncommited changes in your dot-files folder. You can push them using push-my-fucking-dot-files"
   else
-    git remote update
-    UPSTREAM=${1:-'@{u}'}
-    LOCAL=$(git rev-parse @)
-    REMOTE=$(git rev-parse "$UPSTREAM")
-    BASE=$(git merge-base @ "$UPSTREAM")
-
-    if [ $LOCAL = $REMOTE ]; then
-      #echo "Up-to-date"
-    elif [ $LOCAL = $BASE ]; then
+    git fetch origin
+    reslog=$(git log HEAD..origin/master --oneline)
+    if [[ "${reslog}" != "" ]] ; then
       echo "There's updates for your dot-files folder. You can pull them using pull-my-fucking-dot-files :)"
     else
       echo "Hmmm seems that something went wrong with your dot-files repo... You were playing with the time?"

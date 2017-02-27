@@ -21,6 +21,7 @@ if [ ! -z "$TMUX" ]; then
   then
     echo "You have uncommited changes in your dot-files folder. You can push them using push-my-fucking-dot-files"
   else
+    git remote update
     UPSTREAM=${1:-'@{u}'}
     LOCAL=$(git rev-parse @)
     REMOTE=$(git rev-parse "$UPSTREAM")

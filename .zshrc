@@ -31,4 +31,3 @@ if [ ! -z "$TMUX" ]; then
     cd -
   fi
 fi
-

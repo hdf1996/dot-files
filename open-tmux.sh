@@ -8,4 +8,7 @@ if [[ "${reslog}" != "" ]] ; then
   tmux-next resize-pane -t 1 -y 3
 fi
 cd -
+# Just for a near future...
+# tmux-next split-window -d 'wit'
+# tmux-next resize-pane -t 1 -y 3
 tmux-next -2 attach-session -d

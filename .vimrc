@@ -2,6 +2,10 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 let NERDTreeShowHidden=1
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_dont_split = 'NERD'
+set splitright
+
 set noswapfile
 set ai
 set textwidth=80

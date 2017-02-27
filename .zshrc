@@ -24,8 +24,6 @@ if [ ! -z "$TMUX" ]; then
     reslog=$(git log HEAD..origin/master --oneline)
     if [[ "${reslog}" != "" ]] ; then
       echo "There's updates for your dot-files folder. You can pull them using pull-my-fucking-dot-files :)"
-    else
-      echo "Hmmm seems that something went wrong with your dot-files repo... You were playing with the time?"
     fi
   fi
 fi

@@ -23,4 +23,3 @@ if [ ! -z "$TMUX" ]; then
     echo "You have uncommited changes in your dot-files folder. You can push them using push-my-fucking-dot-files"
   fi
 fi
-

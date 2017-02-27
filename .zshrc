@@ -10,6 +10,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias push-my-fucking-dot-files="cd ~/.dot-files;git add --all ; git pull origin master; git commit -m 'Updated dot-files!' ; git push origin master; cd -"
 alias pull-my-fucking-dot-files="cd ~/.dot-files && git pull origin master; cd -"
+alias edit-my-fucking-dot-files="cd ~/.dot-files && vim; cd -"
 alias gs="git status"
 
 

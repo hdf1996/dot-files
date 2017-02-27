@@ -6,6 +6,7 @@ set noswapfile
 set ai
 set textwidth=80
 set colorcolumn=+1
+set showmode
 
 " Shortcuts
 let mapleader = "\<tab>"

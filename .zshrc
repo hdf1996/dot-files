@@ -8,7 +8,7 @@ source $ZSH/oh-my-zsh.sh
 
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias push-my-fucking-dot-files="cd ~/.dot-files;git add . ; git pull origin master; git commit -m 'Updated dot-files!' ; git push origin master; cd -"
+alias push-my-fucking-dot-files="cd ~/.dot-files;git add --all ; git pull origin master; git commit -m 'Updated dot-files!' ; git push origin master; cd -"
 alias pull-my-fucking-dot-files="cd ~/.dot-files && git pull origin master; cd -"
 alias gs="git status"
 

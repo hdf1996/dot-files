@@ -16,4 +16,3 @@
 
 ## CTRLP.vim
 - CTRL + P = Toogle fast search
-

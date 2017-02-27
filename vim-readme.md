@@ -13,6 +13,7 @@
 ## NerdTree
 - CTRL + W + W = Toggle between NERDTree & buffer
 - ? (on NERDTree) = See NERDTree Help
+- m = Node options (new, deleted, etc.)
 
 ## CTRLP.vim
 - CTRL + P = Toogle fast search

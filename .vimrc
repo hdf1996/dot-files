@@ -4,6 +4,13 @@ filetype off                  " required
 let NERDTreeShowHidden=1
 set noswapfile
 set ai
+set textwidth=80
+set colorcolumn=+1
+
+" Shortcuts
+let mapleader = "\<tab>"
+nnoremap <leader><leader> <c-^>
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()

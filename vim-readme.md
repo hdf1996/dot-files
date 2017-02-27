@@ -9,6 +9,8 @@
 - yyp = Duplicate line
 - yy = Copy
 - p = Paste
+- o = New line after
+- O = New line before
 
 ## NerdTree
 - CTRL + W + W = Toggle between NERDTree & buffer

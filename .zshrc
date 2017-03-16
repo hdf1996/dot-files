@@ -12,6 +12,8 @@ alias push-my-fucking-dot-files="cd ~/.dot-files;git add --all ; git pull origin
 alias pull-my-fucking-dot-files="cd ~/.dot-files && git pull origin master; cd -"
 alias edit-my-fucking-dot-files="cd ~/.dot-files && vim; cd -"
 alias gs="git status"
+alias gc="git checkout"
+alias gp="git pull"
 
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 

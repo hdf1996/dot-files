@@ -1,7 +1,7 @@
 #!/bin/sh
 tmux new-session -d
 cd ~/.dot-files
-git fetch origin > /dev/null 2>&1
+#git fetch origin > /dev/null 2>&1
 #reslog=$(git log HEAD..origin/master --oneline)
 #if [[ "${reslog}" != "" ]] ; then
 #  tmux split-window -d 'echo "There is updates for your dot-files folder. You can pull them using pull-my-fucking-dot-files :)"; read'

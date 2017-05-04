@@ -4,6 +4,7 @@ filetype off                  " required
 let NERDTreeShowHidden=1
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_dont_split = 'NERD'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 set splitright
 
 set noswapfile
@@ -40,7 +41,6 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 set number
-
 " Style
 syntax on
 

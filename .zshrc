@@ -14,7 +14,7 @@ alias edit-my-fucking-dot-files="cd ~/.dot-files && vim; cd -"
 alias gs="git status"
 alias gc="git checkout"
 alias gp="git pull"
-
+q() { cd ~/workspace/$1 }
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 

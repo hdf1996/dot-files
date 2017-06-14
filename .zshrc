@@ -2,12 +2,10 @@ export ZSH=~/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git)
+plugins=(git bundler gem npm per-directory-history rails)
 
 source $ZSH/oh-my-zsh.sh
 
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias push-my-fucking-dot-files="cd ~/.dot-files;git add --all ; git pull origin master; git commit -m 'Updated dot-files!' ; git push origin master; cd -"
 alias show-the-fucking-differences-of-my-fucking-dot-files="cd ~/.dot-files; git diff; cd -"
 alias pull-my-fucking-dot-files="cd ~/.dot-files && git pull origin master; cd -"
@@ -20,6 +18,7 @@ q() { cd ~/workspace/$1 }
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 if [ ! -z "$TMUX" ]; then
@@ -30,8 +29,5 @@ fi
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 [ -s "/home/hugo/.jabba/jabba.sh" ] && source "/home/hugo/.jabba/jabba.sh"

@@ -13,6 +13,8 @@ alias edit-my-fucking-dot-files="cd ~/.dot-files && vim; cd -"
 alias gs="git status"
 alias gc="git checkout"
 alias gp="git pull"
+alias gf="git commit -am 'Fixed conflicts' && git push origin HEAD"
+alias gpp="git push origin HEAD"
 q() { cd ~/workspace/$1 }
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 

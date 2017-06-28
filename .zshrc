@@ -20,6 +20,7 @@ alias ta="tonode add"
 alias tl="tonode list"
 
 q() { cd ~/workspace/$1 }
+qw() { cd ~/wolox/$1 }
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 

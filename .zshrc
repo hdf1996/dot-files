@@ -15,6 +15,10 @@ alias gc="git checkout"
 alias gp="git pull"
 alias gf="git commit -am 'Fixed conflicts' && git push origin HEAD"
 alias gpp="git push origin HEAD"
+alias t="tonode"
+alias ta="tonode add"
+alias tl="tonode list"
+
 q() { cd ~/workspace/$1 }
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 

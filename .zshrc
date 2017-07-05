@@ -2,7 +2,7 @@ export ZSH=~/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git bundler gem npm per-directory-history rails)
+plugins=(git bundler gem npm rails)
 
 source $ZSH/oh-my-zsh.sh
 

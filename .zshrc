@@ -19,6 +19,28 @@ alias t="tonode"
 alias ta="tonode add"
 alias tl="tonode list"
 
+alias github=GitHub
+
+function GitHub()
+{
+  if [ ! -d .git ] ; 
+    then echo "ERROR: This isnt a git directory" && return false; 
+  fi
+  git_url=`git config --get remote.origin.url`
+  if [[ $git_url == https://github* ]];
+  then
+    url=${git_url%.git}
+  else
+    if [[ $git_url == git@github.com* ]]
+    then
+      url="https://github.com/${${git_url:15}%.git}"
+    else
+      echo "ERROR: Remote origin is invalid" && return false;
+    fi
+  fi
+  google-chrome $url
+}
+
 q() { cd ~/workspace/$1 }
 qa() { atom ~/workspace/$1 }
 qw() { cd ~/wolox/$1 }
@@ -31,9 +53,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 if [ ! -z "$TMUX" ]; then
-  if $(cd ~/.dot-files; git status -s | grep -q '^.M'); then
-    echo "You have uncommited changes in your dot-files folder. You can push them using push-my-fucking-dot-files"
-  fi
+if $(cd ~/.dot-files; git status -s | grep -q '^.M'); then
+  echo "You have uncommited changes in your dot-files folder. You can push them using push-my-fucking-dot-files"
+fi
 fi
 
 export PATH="$HOME/.rbenv/bin:$PATH"

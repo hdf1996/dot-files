@@ -18,8 +18,8 @@ alias gpp="git push origin HEAD"
 alias t="tonode"
 alias ta="tonode add"
 alias tl="tonode list"
-
 alias github=GitHub
+alias gh=github
 
 function GitHub()
 {

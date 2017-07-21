@@ -20,6 +20,7 @@ alias ta="tonode add"
 alias tl="tonode list"
 alias github=GitHub
 alias gh=github
+alias copy-my-fucking-ssh-keys="cat .ssh/id_rsa.pub | xclip -sel clip"
 
 function GitHub()
 {

@@ -66,4 +66,6 @@ fi
 [ -s "/home/hugo/.jabba/jabba.sh" ] && source "/home/hugo/.jabba/jabba.sh"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/work
 export PATH="$PATH:$HOME/.rvm/bin"

@@ -67,3 +67,6 @@ fi
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/work
 export PATH="$PATH:$HOME/.rvm/bin"
+
+source ~/.dot-files/functions/screen.sh
+export PATH=/home/hugo/.local/bin:$PATH

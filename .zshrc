@@ -10,17 +10,15 @@ alias push-my-fucking-dot-files="cd ~/.dot-files;git add --all ; git pull origin
 alias show-the-fucking-differences-of-my-fucking-dot-files="cd ~/.dot-files; git diff; cd -"
 alias pull-my-fucking-dot-files="cd ~/.dot-files && git pull origin master; cd -"
 alias edit-my-fucking-dot-files="cd ~/.dot-files && vim; cd -"
-alias gs="git status"
-alias gc="git checkout"
-alias gp="git pull"
-alias gf="git commit -am 'Fixed conflicts' && git push origin HEAD"
-alias gpp="git push origin HEAD"
-alias t="tonode"
-alias ta="tonode add"
-alias tl="tonode list"
+alias g="git"
+alias gs="g status"
+alias gc="g checkout"
+alias gp="g pull"
+alias gf="g commit -am 'Fixed conflicts' && git push origin HEAD"
+alias gpp="g push origin HEAD"
 alias github=GitHub
 alias gh=github
-alias copy-my-fucking-ssh-keys="cat .ssh/id_rsa.pub | xclip -sel clip"
+alias copy-my-fucking-ssh-keys="cat ~/.ssh/id_rsa.pub | xclip -sel clip"
 
 function GitHub()
 {
@@ -65,3 +63,10 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 [ -s "/home/hugo/.jabba/jabba.sh" ] && source "/home/hugo/.jabba/jabba.sh"
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/work
+export PATH="$PATH:$HOME/.rvm/bin"
+
+source ~/.dot-files/functions/screen.sh
+export PATH=/home/hugo/.local/bin:$PATH

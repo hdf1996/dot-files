@@ -11,9 +11,11 @@ alias show-the-fucking-differences-of-my-fucking-dot-files="cd ~/.dot-files; git
 alias pull-my-fucking-dot-files="cd ~/.dot-files && git pull origin master; cd -"
 alias edit-my-fucking-dot-files="cd ~/.dot-files && vim; cd -"
 alias g="git"
+alias ga="g add ."
 alias gs="g status"
 alias gc="g checkout"
 alias gp="g pull"
+alias gpoh="gp origin HEAD"
 alias gf="g commit -am 'Fixed conflicts' && git push origin HEAD"
 alias gpp="g push origin HEAD"
 alias github=GitHub
@@ -70,3 +72,5 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 source ~/.dot-files/functions/screen.sh
 export PATH=/home/hugo/.local/bin:$PATH
+export ANDROID_HOME=/home/hugo/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools

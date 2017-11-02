@@ -7,44 +7,10 @@ plugins=(git bundler gem npm rails)
 source $ZSH/oh-my-zsh.sh
 for f in $DOT_FILES/aliases/*.sh; do source $f; done
 
-alias g="git"
-alias gs="g status"
-alias gc="g checkout"
-alias gp="g pull"
-alias gf="g commit -am 'Fixed conflicts' && git push origin HEAD"
-alias gpp="g push origin HEAD"
-alias github=GitHub
-alias gh=github
-alias copy-my-fucking-ssh-keys="cat ~/.ssh/id_rsa.pub | xclip -sel clip"
-
-function GitHub()
-{
-  if [ ! -d .git ] ; 
-    then echo "ERROR: This isnt a git directory" && return false; 
-  fi
-  git_url=`git config --get remote.origin.url`  
-  git_branch=`git rev-parse --abbrev-ref HEAD 2>/dev/null`
-  if [[ $git_url == https://github* ]];
-  then
-    url=${git_url%.git}/tree/${git_branch}
-  else
-    if [[ $git_url == git@github.com* ]]
-    then
-      url="https://github.com/${${git_url:15}%.git}/tree/${git_branch}"
-    else
-      echo "ERROR: Remote origin is invalid" && return false;
-    fi
-  fi
-  google-chrome $url
-}
-
 q() { cd ~/workspace/$1 }
 qa() { atom ~/workspace/$1 }
 qw() { cd ~/wolox/$1 }
 qwa() { atom ~/wolox/$1 }
-
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

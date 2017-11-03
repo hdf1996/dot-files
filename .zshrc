@@ -5,47 +5,7 @@ DOT_FILES=~/.dot-files
 plugins=(git bundler gem npm rails)
 
 source $ZSH/oh-my-zsh.sh
-<<<<<<< HEAD
-
-alias push-my-fucking-dot-files="cd ~/.dot-files;git add --all ; git pull origin master; git commit -m 'Updated dot-files!' ; git push origin master; cd -"
-alias show-the-fucking-differences-of-my-fucking-dot-files="cd ~/.dot-files; git diff; cd -"
-alias pull-my-fucking-dot-files="cd ~/.dot-files && git pull origin master; cd -"
-alias edit-my-fucking-dot-files="cd ~/.dot-files && vim; cd -"
-alias g="git"
-alias ga="g add ."
-alias gs="g status"
-alias gc="g checkout"
-alias gp="g pull"
-alias gpoh="gp origin HEAD"
-alias gf="g commit -am 'Fixed conflicts' && git push origin HEAD"
-alias gpp="g push origin HEAD"
-alias github=GitHub
-alias gh=github
-alias copy-my-fucking-ssh-keys="cat ~/.ssh/id_rsa.pub | xclip -sel clip"
-
-function GitHub()
-{
-  if [ ! -d .git ] ; 
-    then echo "ERROR: This isnt a git directory" && return false; 
-  fi
-  git_url=`git config --get remote.origin.url`  
-  git_branch=`git rev-parse --abbrev-ref HEAD 2>/dev/null`
-  if [[ $git_url == https://github* ]];
-  then
-    url=${git_url%.git}/tree/${git_branch}
-  else
-    if [[ $git_url == git@github.com* ]]
-    then
-      url="https://github.com/${${git_url:15}%.git}/tree/${git_branch}"
-    else
-      echo "ERROR: Remote origin is invalid" && return false;
-    fi
-  fi
-  google-chrome $url
-}
-=======
 for f in $DOT_FILES/aliases/*.sh; do source $f; done
->>>>>>> 348c813c4f4a201a4774b606ddb740944237f160
 
 q() { cd ~/workspace/$1 }
 qa() { atom ~/workspace/$1 }
@@ -73,9 +33,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 source ~/.dot-files/functions/screen.sh
 export PATH=/home/hugo/.local/bin:$PATH
-<<<<<<< HEAD
 export ANDROID_HOME=/home/hugo/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-=======
 export PATH="$PATH:/opt/mssql-tools/bin"
->>>>>>> 348c813c4f4a201a4774b606ddb740944237f160

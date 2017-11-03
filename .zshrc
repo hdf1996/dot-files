@@ -2,7 +2,7 @@ export ZSH=~/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 DOT_FILES=~/.dot-files
-plugins=(git bundler gem npm rails)
+plugins=()
 
 source $ZSH/oh-my-zsh.sh
 for f in $DOT_FILES/aliases/*.sh; do source $f; done
@@ -31,8 +31,5 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/work
 export PATH="$PATH:$HOME/.rvm/bin"
 
-source ~/.dot-files/functions/screen.sh
 export PATH=/home/hugo/.local/bin:$PATH
-export ANDROID_HOME=/home/hugo/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export PATH="$PATH:/opt/mssql-tools/bin"

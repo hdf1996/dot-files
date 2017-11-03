@@ -1,10 +1,11 @@
 export ZSH=~/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
-
+DOT_FILES=~/.dot-files
 plugins=(git bundler gem npm rails)
 
 source $ZSH/oh-my-zsh.sh
+<<<<<<< HEAD
 
 alias push-my-fucking-dot-files="cd ~/.dot-files;git add --all ; git pull origin master; git commit -m 'Updated dot-files!' ; git push origin master; cd -"
 alias show-the-fucking-differences-of-my-fucking-dot-files="cd ~/.dot-files; git diff; cd -"
@@ -42,14 +43,14 @@ function GitHub()
   fi
   google-chrome $url
 }
+=======
+for f in $DOT_FILES/aliases/*.sh; do source $f; done
+>>>>>>> 348c813c4f4a201a4774b606ddb740944237f160
 
 q() { cd ~/workspace/$1 }
 qa() { atom ~/workspace/$1 }
 qw() { cd ~/wolox/$1 }
 qwa() { atom ~/wolox/$1 }
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -60,9 +61,9 @@ if $(cd ~/.dot-files; git status -s | grep -q '^.M'); then
 fi
 fi
 
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/bin:$PATH"
 
+eval "$(rbenv init -)"
 [ -s "/home/hugo/.jabba/jabba.sh" ] && source "/home/hugo/.jabba/jabba.sh"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
@@ -72,5 +73,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 source ~/.dot-files/functions/screen.sh
 export PATH=/home/hugo/.local/bin:$PATH
+<<<<<<< HEAD
 export ANDROID_HOME=/home/hugo/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+=======
+export PATH="$PATH:/opt/mssql-tools/bin"
+>>>>>>> 348c813c4f4a201a4774b606ddb740944237f160

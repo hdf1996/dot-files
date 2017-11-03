@@ -1,0 +1,6 @@
+alias g="git"
+alias gs="g status"
+alias gc="g checkout"
+alias gp="g pull"
+alias gf="g commit -am 'Fixed conflicts' && git push origin HEAD"
+alias gpp="g push origin HEAD"

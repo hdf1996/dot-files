@@ -1,0 +1,6 @@
+alias r="rails"
+alias rs="r s"
+alias rc="r c"
+alias rdm="r db:migrate"
+alias rdc="r db:create"
+alias rdd="r db:drop"

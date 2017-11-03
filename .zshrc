@@ -6,6 +6,7 @@ plugins=()
 
 source $ZSH/oh-my-zsh.sh
 for f in $DOT_FILES/aliases/*.sh; do source $f; done
+for f in $DOT_FILES/paths/*.sh; do source $f; done
 
 q() { cd ~/workspace/$1 }
 qa() { atom ~/workspace/$1 }
@@ -21,15 +22,7 @@ if $(cd ~/.dot-files; git status -s | grep -q '^.M'); then
 fi
 fi
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-
-eval "$(rbenv init -)"
 [ -s "/home/hugo/.jabba/jabba.sh" ] && source "/home/hugo/.jabba/jabba.sh"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/work
-export PATH="$PATH:$HOME/.rvm/bin"
 
 export PATH=/home/hugo/.local/bin:$PATH
 export PATH="$PATH:/opt/mssql-tools/bin"

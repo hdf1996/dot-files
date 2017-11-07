@@ -1,4 +1,6 @@
 alias g="git"
+alias ga="g add"
+alias gaa="ga ."
 alias gs="g status"
 alias gb="gc -b"
 alias gc="g checkout"

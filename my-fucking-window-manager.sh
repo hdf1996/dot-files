@@ -8,7 +8,7 @@ hc() {
 
 hc emit_hook reload
 
-xsetroot -solid '#5A8E3A'
+xsetroot -solid '#6A8E3A'
 
 # remove all existing keybindings
 hc keyunbind --all
@@ -23,6 +23,7 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
 hc keybind $Mod-Return spawn ${TERMINAL:-xterm} # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-d spawn dmenu_run
+hc keybind $Mod-Shift-m spawn i3lock
 
 # basic movement
 # focusing clients

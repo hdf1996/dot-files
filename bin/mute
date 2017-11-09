@@ -1,0 +1,3 @@
+#!/bin/bash
+
+[ $(pacmd list-sinks | grep muted | awk '{ print $2 }') == "yes" ] && pacmd set-sink-mute 0 0 || pacmd set-sink-mute 0 1

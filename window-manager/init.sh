@@ -20,7 +20,7 @@ Mod=Mod1    # Use alt as the main modifier
 
 for f in $HOME/.dot-files/window-manager/keybindings/*.sh; do source $f; done
 for f in $HOME/.dot-files/window-manager/configuration/*.sh; do source $f; done
-hc keybind $Mod-Return spawn ${TERMINAL:-xterm} # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-Return spawn ${TERMINAL:-gnome-terminal} # use your $TERMINAL with xterm as fallback
 
 clients
 

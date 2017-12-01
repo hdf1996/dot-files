@@ -1,4 +1,5 @@
 alias r="rails"
+alias rr="r routes"
 alias rs="r s"
 alias rc="r c"
 alias rdm="r db:migrate"

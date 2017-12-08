@@ -144,7 +144,7 @@ hc pad $monitor $panel_height
             date)
                 #echo "resetting date" >&2
                 date="${cmd[@]:1}"
-                battery="^fg(#909090)$(acpi | cut -d, -f2)"
+                battery=" |^fg(#909090)$(acpi | cut -d, -f2)"
                 ;;
             quit_panel)
                 exit

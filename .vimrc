@@ -9,13 +9,16 @@ set splitright
 set mouse=a
 set noswapfile
 set ai
-set textwidth=80
+set textwidth=100
 set colorcolumn=+1
 set showmode
 
+
 " Shortcuts
-let mapleader = "\<tab>"
 nnoremap <leader><leader> <c-^>
+noremap <Leader>s :update<CR>
+noremap <Leader>q :qa<CR>
+
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim

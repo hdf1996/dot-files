@@ -89,7 +89,7 @@ module.exports = {
 
     // for setting shell arguments (i.e. for using interactive shellArgs: ['-i'])
     // by default ['--login'] will be used
-    shellArgs: ['--login', '-c', '"tmux"'],
+    shellArgs: ['--login'],
 
     // for environment variables
     env: {},
@@ -118,14 +118,16 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     'hyperline',
-    'hyper-snazzy'
+    'hyper-snazzy',
+    'hyper-keymap',
+    'hyper-spotify',
+    'verminal'
   ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
   localPlugins: [],
-
   keymaps: {
     // Example
     // 'window:devtools': 'cmd+alt+o',

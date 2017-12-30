@@ -1,6 +1,6 @@
 export ZSH=~/.oh-my-zsh
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 DOT_FILES=~/.dot-files
 plugins=()
 
@@ -16,6 +16,8 @@ qwa() { atom ~/wolox/$1 }
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
+  . "/usr/local/opt/nvm/nvm.sh"
+
 if [ ! -z "$TMUX" ]; then
 if $(cd ~/.dot-files; git status -s | grep -q '^.M'); then
   echo "You have uncommited changes in your dot-files folder. You can push them using push-my-fucking-dot-files"
@@ -26,3 +28,6 @@ fi
 
 export PATH=/home/hugo/.local/bin:$PATH
 export PATH="$PATH:/opt/mssql-tools/bin"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+

@@ -1,8 +1,8 @@
 export ZSH=~/.oh-my-zsh
 
-ZSH_THEME="agnoster"
+ZSH_THEME="refined"
 DOT_FILES=~/.dot-files
-plugins=()
+plugins=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 for f in $DOT_FILES/aliases/*.sh; do source $f; done
@@ -31,3 +31,4 @@ export PATH="$PATH:/opt/mssql-tools/bin"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+source /Users/hfarji/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -35,3 +35,5 @@ source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # added by travis gem
 [ -f /Users/hfarji/.travis/travis.sh ] && source /Users/hfarji/.travis/travis.sh
+export BASHMELON_PATH=/Users/hfarji/.bashmelon
+source /Users/hfarji/.bashmelon/bin/init

@@ -31,7 +31,7 @@ export PATH="$PATH:/opt/mssql-tools/bin"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-source /Users/hfarji/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # added by travis gem
 [ -f /Users/hfarji/.travis/travis.sh ] && source /Users/hfarji/.travis/travis.sh

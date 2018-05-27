@@ -6,8 +6,6 @@ plugins=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-export BASHMELON_PATH=/Users/hfarji/.bashmelon
-source /Users/hfarji/.bashmelon/bin/init
 for f in $DOT_FILES/aliases/**/*.sh; do source $f; done
 for f in $DOT_FILES/paths/**/*.sh; do source $f; done
 
@@ -40,5 +38,11 @@ source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # added by travis gem
 [ -f /Users/hfarji/.travis/travis.sh ] && source /Users/hfarji/.travis/travis.sh
-export BASHMELON_PATH=/home/hugo/.bashmelon
-source /home/hugo/.bashmelon/bin/init
+if [ -f /home/hugo/.bashmelon ]; then
+  export BASHMELON_PATH=/home/hugo/.bashmelon
+  source /home/hugo/.bashmelon/bin/init
+fi
+if [ -f /home/hfarji/.bashmelon ]; then
+  export BASHMELON_PATH=/Users/hfarji/.bashmelon
+  source /Users/hfarji/.bashmelon/bin/init
+fi

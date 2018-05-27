@@ -5,13 +5,18 @@ DOT_FILES=~/.dot-files
 plugins=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-for f in $DOT_FILES/aliases/*.sh; do source $f; done
-for f in $DOT_FILES/paths/*.sh; do source $f; done
+
+export BASHMELON_PATH=/Users/hfarji/.bashmelon
+source /Users/hfarji/.bashmelon/bin/init
+for f in $DOT_FILES/aliases/**/*.sh; do source $f; done
+for f in $DOT_FILES/paths/**/*.sh; do source $f; done
 
 q() { cd ~/workspace/$1 }
 qa() { atom ~/workspace/$1 }
 qw() { cd ~/wolox/$1 }
 qwa() { atom ~/wolox/$1 }
+
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -35,5 +40,3 @@ source /Users/hfarji/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # added by travis gem
 [ -f /Users/hfarji/.travis/travis.sh ] && source /Users/hfarji/.travis/travis.sh
-export BASHMELON_PATH=/Users/hfarji/.bashmelon
-source /Users/hfarji/.bashmelon/bin/init

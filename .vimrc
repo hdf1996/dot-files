@@ -33,7 +33,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'tpope/vim-rails'
 autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -44,8 +43,19 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 set number
+set wrap linebreak nolist
 " Style
 syntax on
 
+" Nerdtree
+augroup NERD
+  au!
+  autocmd VimEnter * NERDTree
+  autocmd VimEnter * wincmd p
+augroup END
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let g:nerdtree_tabs_open_on_gui_startup = 0
+let g:nerdtree_tabs_open_on_console_startup = 0
 call vundle#end()            " required
 filetype plugin indent on    " required

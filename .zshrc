@@ -16,7 +16,7 @@ qwa() { atom ~/wolox/$1 }
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-  . "/usr/local/opt/nvm/nvm.sh"
+[ -f /usr/local/opt/nvm/nvm.sh ] &&  . "/usr/local/opt/nvm/nvm.sh"
 
 if [ ! -z "$TMUX" ]; then
 if $(cd ~/.dot-files; git status -s | grep -q '^.M'); then
@@ -35,5 +35,5 @@ source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # added by travis gem
 [ -f /Users/hfarji/.travis/travis.sh ] && source /Users/hfarji/.travis/travis.sh
-export BASHMELON_PATH=/Users/hfarji/.bashmelon
-source /Users/hfarji/.bashmelon/bin/init
+export BASHMELON_PATH=/home/hugo/.bashmelon
+source /home/hugo/.bashmelon/bin/init

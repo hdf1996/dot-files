@@ -1,6 +1,6 @@
 #!/bin/bash
 
-files=".zshrc .tmux.conf .vimrc"
+files=".zshrc .tmux.conf .vimrc .hyper.js"
 installation_path=~/
 cd ~/.dot-files/
 for file in $files; do

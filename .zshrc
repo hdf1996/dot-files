@@ -1,6 +1,6 @@
 export ZSH=~/.oh-my-zsh
 
-ZSH_THEME="refined"
+ZSH_THEME="cloud"
 DOT_FILES=~/.dot-files
 plugins=(zsh-syntax-highlighting)
 

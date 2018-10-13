@@ -119,3 +119,5 @@ add-dot-file () {
 
   echo "Added!"
 }
+
+for f in $DOT_FILES_PATH/aliases/**/*.sh; do source $f; done

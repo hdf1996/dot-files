@@ -1,3 +1,9 @@
 alias g=git
+alias gs="g status"
 alias ga="g add"
 alias gaa="ga ."
+alias gc="g commit"
+alias gcm="gc -m"
+alias gco="g checkout"
+alias gcom="gco master"
+alias gcod="gco development"

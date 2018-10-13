@@ -102,7 +102,6 @@ DOT_FILES_PATH="$HOME/.dot-files"
 add-dot-file () {
   original_dot_file=$(basename -- $1)
   final_dot_file=$(echo "$DOT_FILES_PATH/dots/$original_dot_file")
-  # TODO: Check file existence
   if [ -f $final_dot_file ]
   then
     echo "That file were already added!"
@@ -115,7 +114,8 @@ add-dot-file () {
   mv $1 $final_dot_file
   ln -s $final_dot_file $1
 
-  echo "$final_dot_file" >> "$DOT_FILES_PATH/dotfiles-manifest"
+  echo "$original_dot_file" >> "$DOT_FILES_PATH/dotfiles-manifest"
+  echo "$(sort -u "$DOT_FILES_PATH/dotfiles-manifest" | uniq)" > "$DOT_FILES_PATH/dotfiles-manifest"
+
   echo "Added!"
 }
-

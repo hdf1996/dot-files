@@ -1,1 +1,0 @@
-alias ber="be rspec"

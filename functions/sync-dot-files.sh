@@ -15,6 +15,7 @@ pull-dot-files () {
     echo "You have pending changes to sync, try exporting your dot files first with export-dot-files"
     return 1
   else
+    g pull
   fi
   cd -;
 }

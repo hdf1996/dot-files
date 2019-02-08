@@ -1,6 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
-
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnosterzak"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -77,3 +76,4 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export JAVA_HOME=$HOME/.jabba/jdk/1.8.192
+ZSH_THEME="agnosterzak"

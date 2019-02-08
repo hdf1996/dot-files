@@ -8,3 +8,8 @@ push-dot-files () {
   gpuh
   cd -;
 }
+
+export-dot-files () {
+  write-software-versions
+  push-dot-files
+}

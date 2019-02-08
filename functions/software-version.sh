@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-versions=(git heroku rbenv)
+versions=(git heroku rbenv tmux)
 
 get-version-of-git () {
   echo $(git --version | awk '{ print $3 }')
@@ -12,6 +12,10 @@ get-version-of-heroku () {
 
 get-version-of-rbenv () {
   echo $(rbenv --version | awk '{ print $2 }' )
+}
+
+get-version-of-tmux () {
+  echo $(tmux -V | awk '{ print $2 }' )
 }
 
 get-software-versions () {

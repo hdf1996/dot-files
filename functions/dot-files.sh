@@ -19,7 +19,7 @@ add-dot-file () {
   echo "Added!"
 }
 
-link-dotfiles () {
+link-dot-files () {
   while read -r line; do
     path_to_link=$(echo "$DOT_FILES_PATH/dots/$line")
     if [ -f $HOME/$line ]

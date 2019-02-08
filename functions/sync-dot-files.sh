@@ -16,6 +16,8 @@ pull-dot-files () {
     return 1
   else
     g pull
+
+    link-dot-files
   fi
   cd -;
 }

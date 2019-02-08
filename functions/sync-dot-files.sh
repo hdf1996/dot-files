@@ -9,6 +9,16 @@ push-dot-files () {
   cd -;
 }
 
+pull-dot-files () {
+  cd $DOT_FILES_PATH;
+  if [[ `git status --porcelain` ]]; then
+    echo "You have pending changes to sync, try with export-dot-files"
+    return 1
+  else
+  fi
+  cd -;
+}
+
 export-dot-files () {
   write-software-versions
   push-dot-files

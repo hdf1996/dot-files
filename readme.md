@@ -27,3 +27,4 @@ This will make available most of the aliases, configurations, and sync process, 
 ## Aliases
 
 All the aliases are stored on the `aliases` folder, feel free to check them there
+ 

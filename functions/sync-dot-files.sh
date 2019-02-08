@@ -12,7 +12,7 @@ push-dot-files () {
 pull-dot-files () {
   cd $DOT_FILES_PATH;
   if [[ `git status --porcelain` ]]; then
-    echo "You have pending changes to sync, try with export-dot-files"
+    echo "You have pending changes to sync, try exporting your dot files first with export-dot-files"
     return 1
   else
   fi

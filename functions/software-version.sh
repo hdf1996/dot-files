@@ -30,5 +30,5 @@ get-software-versions () {
 }
 
 write-software-versions () {
-  get-versions > $DOT_FILES_PATH/configs/sotfware-versions
+  get-software-versions > $DOT_FILES_PATH/configs/sotfware-versions
 }

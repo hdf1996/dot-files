@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mkdir -p $HOME/.dot-files/bin
+mkdir -p $HOME/.dot-files
 
 if [ -d "$HOME/.dot-files/.git" ] 
 then

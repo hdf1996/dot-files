@@ -2,3 +2,4 @@ functions/telegram.sh
 bin/telegram.sh
 functions/telegram.stg.sh
 bin/telegram.stg.sh
+backup/*

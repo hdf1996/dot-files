@@ -13,7 +13,10 @@ Ya' know, these are my dotfiles, im currently using them on MacOS & Ubuntu 18.04
 
 ## Installation
 Just run:
-
+```
+git clone git@github.com:hdf1986/dot-files.git $HOME/.dot-files --depth=1
+$HOME/.dot-files/setup.sh
+```
 
 And don't forget to restart your terminal!
 

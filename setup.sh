@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
+files=".zshrc .tmux.conf"
+installation_path=$HOME/
+cd $HOME/.dot-files/
 
-mkdir -p $HOME/.dot-files
-
-git clone git@github.com:hdf1986/dot-files.git $HOME/.dot-files --depth=1 && echo "Cloned repository." || echo "Failed to clone repository"
-
+mkdir -p backup
+for file in $files; do
+  echo "Copying symlink: $file";
+  mv ${installation_path}${file} backup/$file-$(date +"%d-%m-%Y").old
+  ln -s $HOME/.dot-files/dots/$file $installation_path/$file 
+done

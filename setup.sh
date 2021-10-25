@@ -8,5 +8,5 @@ then
   cd $HOME/.dot-files
   git pull origin master 
 else
-  git clone git@github.com:hdf1986/sync-that-thing-please.git $HOME/.sync-that-thing-please/source --depth=1
+  git clone git@github.com:hdf1986/dot-files.git $HOME/.dot-files --depth=1
 fi

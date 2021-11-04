@@ -32,12 +32,7 @@ ZSH_THEME="robbyrussell"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /Users/hfarji/.nvm/versions/node/v10.15.3/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/hfarji/.nvm/versions/node/v10.15.3/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
-. $HOME/.z-jump-around/z.sh
 
 # added by travis gem
 [ -f /Users/hfarji/.travis/travis.sh ] && source /Users/hfarji/.travis/travis.sh
